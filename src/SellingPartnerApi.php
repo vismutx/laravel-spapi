@@ -15,7 +15,7 @@ final class SellingPartnerApi
      * @param \HighsideLabs\LaravelSpApi\Models\Credentials|int $credentials
      *  The Credentials or id of the credentials to use for an SP API class.
      */
-    public static function makeApi(string $apiCls, Credentials|int $credentials)
+    public static function makeApi(string $apiCls, $credentials)
     {
         if (!in_array($apiCls, self::getSpApiClasses())) {
             throw new InvalidArgumentException("Invalid SP API class: $apiCls");
